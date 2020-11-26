@@ -1,6 +1,6 @@
 {
   "name": "posthtml-parser-title",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "PostHTML plugin description",
   "license": "MIT",
   "repository": "posthtml/posthtml-parser-title",
