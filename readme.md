@@ -8,8 +8,8 @@
 Provides parsing of the **`title`** of the element. htmlparsin2 does not provide item parsing `title`, `style`, `script` in mode [xmlMode](https://github.com/fb55/htmlparser2/wiki/Parser-options#option-xmlmode).
 
 **`Related issue:`**
- - [xmlMode](https://github.com/fb55/htmlparser2/issues/642)
- - [Block in title results in unexpected block](https://github.com/posthtml/posthtml-parser/issues/53)
+  - [xmlMode](https://github.com/fb55/htmlparser2/issues/642)
+  - [Block in title results in unexpected block](https://github.com/posthtml/posthtml-parser/issues/53)
 
 ## Install
 
