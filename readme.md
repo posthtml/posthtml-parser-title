@@ -1,4 +1,4 @@
-# PLUGIN_NAME <img align="right" height="100" title="PostHTML logo" src="http://posthtml.github.io/posthtml/logo.svg">
+# posthtml-parser-title <img align="right" height="100" title="PostHTML logo" src="http://posthtml.github.io/posthtml/logo.svg">
 
 [![Actions Status][action]][action-url]
 [![NPM][npm]][npm-url]
@@ -30,7 +30,7 @@ After:
 Describe how big guys can install your plugin.
 
 ```bash
-npm i PLUGIN_NAME
+npm i posthtml-parser-title
 ```
 
 ## Usage
@@ -41,10 +41,10 @@ necessary.
 ``` js
 const fs = require('fs');
 const posthtml = require('posthtml');
-const PLUGIN_NAME_CAMEL = require('PLUGIN_NAME');
+const prserTitle = require('posthtml-parser-title');
 
 posthtml()
-    .use(PLUGIN_NAME_CAMEL({ /* options */ }))
+    .use(prserTitle({ /* options */ }))
     .process(html/*, options */)
     .then(result => fs.writeFileSync('./after.html', result.html));
 ```
@@ -68,10 +68,10 @@ Add option:
 ``` js
 const fs = require('fs');
 const posthtml = require('posthtml');
-const PLUGIN_NAME_CAMEL = require('PLUGIN_NAME');
+const prserTitle = require('posthtml-parser-title');
 
 posthtml()
-    .use(PLUGIN_NAME_CAMEL({ feature: 'wow' }))
+    .use(prserTitle({ feature: 'wow' }))
     .process(html/*, options */)
     .then(result => fs.writeFileSync('./after.html', result.html));
 ```
@@ -89,14 +89,14 @@ After:
 
 See [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs) and [contribution guide](CONTRIBUTING.md).
 
-[action]: https://github.com/USER_NAME/PLUGIN_NAME/workflows/Actions%20Status/badge.svg
-[action-url]: https://github.com/USER_NAME/PLUGIN_NAME/actions?query=workflow%3A%22CI+tests%22
+[action]: https://github.com/posthtml/posthtml-parser-title/workflows/Actions%20Status/badge.svg
+[action-url]: https://github.com/posthtml/posthtml-parser-title/actions?query=workflow%3A%22CI+tests%22
 
-[npm]: https://img.shields.io/npm/v/PLUGIN_NAME.svg
-[npm-url]: https://npmjs.com/package/PLUGIN_NAME
+[npm]: https://img.shields.io/npm/v/posthtml-parser-title.svg
+[npm-url]: https://npmjs.com/package/posthtml-parser-title
 
 [style]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg
 [style-url]: https://github.com/xojs/xo
 
-[cover]: https://coveralls.io/repos/USER_NAME/PLUGIN_NAME/badge.svg?branch=master
-[cover-badge]: https://coveralls.io/r/USER_NAME/PLUGIN_NAME?branch=master
+[cover]: https://coveralls.io/repos/posthtml/posthtml-parser-title/badge.svg?branch=master
+[cover-badge]: https://coveralls.io/r/posthtml/posthtml-parser-title?branch=master

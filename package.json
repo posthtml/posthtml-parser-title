@@ -1,10 +1,10 @@
 {
-  "name": "plugin_name",
+  "name": "posthtml-parser-title",
   "version": "0.0.0",
   "description": "PostHTML plugin description",
   "license": "MIT",
-  "repository": "USER_NAME/PLUGIN_NAME",
-  "author": "USER_NAME",
+  "repository": "posthtml/posthtml-parser-title",
+  "author": "posthtml",
   "main": "dist",
   "engines": {
     "node": ">=10"
@@ -21,6 +21,9 @@
     "posthtml",
     "posthtml-plugin"
   ],
+  "dependencies": {
+    "posthtml-parser": "^0.6.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.4.3",
     "@commitlint/cli": "^11.0.0",

@@ -1,12 +1,16 @@
 'use strict';
 
-import { Node } from 'posthtml';
+import {Node} from 'posthtml';
+import parser from 'posthtml-parser';
 
-export default (): Function => {
-  function PLUGIN_NAME_CAMEL(tree: Node): Node {
-    // Your plugin
-    return tree;
-  }
+const posthtmlParserTitle = () => (tree: Node): Node => {
+  const {options} = tree;
 
-  return PLUGIN_NAME_CAMEL;
+  return tree.match({tag: 'title'}, (node: Node): Node => {
+    node.content = node.content.map(content => parser(content, options));
+
+    return node;
+  });
 };
+
+export default posthtmlParserTitle;

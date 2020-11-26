@@ -1,5 +1,6 @@
-export default {
+const options = {
   verbose: true,
   extensions: ['ts'],
-  require: ['esm', 'esbuild-register'],
+  require: ['esm', 'esbuild-register']
 };
+export default options;
