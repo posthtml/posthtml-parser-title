@@ -28,7 +28,7 @@
     "@antfu/eslint-config-ts": "^0.4.3",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-angular": "^11.0.0",
-    "@types/node": "^14.14.6",
+    "@types/node": "^14.14.10",
     "ava": "^3.13.0",
     "c8": "^7.3.5",
     "clinton": "^0.14.0",
@@ -36,10 +36,10 @@
     "esbuild-register": "^1.1.0",
     "esm": "^3.2.25",
     "husky": "^4.3.0",
-    "posthtml": "^0.13.4",
+    "posthtml": "^0.15.1",
     "ts-node": "^9.0.0",
-    "tsup": "^3.7.1",
-    "typescript": "^4.0.5",
-    "xo": "^0.34.2"
+    "tsup": "^3.8.0",
+    "typescript": "^4.1.2",
+    "xo": "^0.35.0"
   }
 }
