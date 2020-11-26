@@ -5,38 +5,19 @@
 [![Coverage][cover]][cover-badge]
 [![XO code style][style]][style-url]
 
-Clone this repo and explain what your plugin do and why thousands of people need it ;)
+Provides parsing of the **`title`** of the element. htmlparsin2 does not provide item parsing `title`, `style`, `script` in mode [xmlMode](https://github.com/fb55/htmlparser2/wiki/Parser-options#option-xmlmode).
 
-Before:
-``` html
-<html>
-  <body>
-    <p class="wow">OMG</p>
-  </body>
-</html>
-```
-
-After:
-``` html
-<svg xmlns="http://www.w3.org/2000/svg">
-  <text class="wow" id="wow_id" fill="#4A83B4" fill-rule="evenodd" font-family="Verdana">
-    OMG
-  </text>
-</svg>
-```
+**`Related issue:`**
+ - [xmlMode](https://github.com/fb55/htmlparser2/issues/642)
+ - [Block in title results in unexpected block](https://github.com/posthtml/posthtml-parser/issues/53)
 
 ## Install
-
-Describe how big guys can install your plugin.
 
 ```bash
 npm i posthtml-parser-title
 ```
 
 ## Usage
-
-Describe how people can use this plugin. Include info about build systems if it's
-necessary.
 
 ``` js
 const fs = require('fs');
@@ -49,42 +30,6 @@ posthtml()
     .then(result => fs.writeFileSync('./after.html', result.html));
 ```
 
-## Options
-
-Describe all features of your plugin with examples of usage.
-
-### Feature
-
-Before:
-``` html
-<html>
-  <body>
-    <p>OMG</p>
-  </body>
-</html>
-```
-
-Add option:
-``` js
-const fs = require('fs');
-const posthtml = require('posthtml');
-const prserTitle = require('posthtml-parser-title');
-
-posthtml()
-    .use(prserTitle({ feature: 'wow' }))
-    .process(html/*, options */)
-    .then(result => fs.writeFileSync('./after.html', result.html));
-```
-
-After:
-``` html
-<html>
-  <body>
-    <p class="wow">OMG</p>
-  </body>
-</html>
-```
-
 ### Contributing
 
 See [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs) and [contribution guide](CONTRIBUTING.md).
@@ -95,7 +40,7 @@ See [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs)
 [npm]: https://img.shields.io/npm/v/posthtml-parser-title.svg
 [npm-url]: https://npmjs.com/package/posthtml-parser-title
 
-[style]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg
+[style]: https://badgen.net/xo/status/chalk
 [style-url]: https://github.com/xojs/xo
 
 [cover]: https://coveralls.io/repos/posthtml/posthtml-parser-title/badge.svg?branch=master
