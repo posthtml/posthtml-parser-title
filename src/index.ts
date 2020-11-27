@@ -1,9 +1,7 @@
 'use strict';
 
-import {Node, Options as PosthtmlOptions} from 'posthtml';
-import parser, {Options as ParserOptions} from 'posthtml-parser';
-
-interface Options extends PosthtmlOptions, ParserOptions {}
+import {Node} from 'posthtml';
+import parser from 'posthtml-parser';
 
 const posthtmlParserTitle = () => (tree: Node): Node => {
   const {options} = tree;
@@ -11,9 +9,11 @@ const posthtmlParserTitle = () => (tree: Node): Node => {
   tree.match({tag: 'title'}, (node: Node): Node => {
     if (node.content) {
       // @ts-expect-error
-      node.content = node.content.flatMap(content => {
+      node.content = node.content.map(content => {
         if (typeof content === 'string') {
-          return parser(content, options);
+          // @ts-expect-error
+          const [node] = parser(content, options);
+          return node;
         }
 
         return node;
