@@ -25,7 +25,7 @@ const posthtml = require('posthtml');
 const prserTitle = require('posthtml-parser-title');
 
 posthtml()
-    .use(prserTitle({ /* options */ }))
+    .use(prserTitle())
     .process(html/*, options */)
     .then(result => fs.writeFileSync('./after.html', result.html));
 ```
