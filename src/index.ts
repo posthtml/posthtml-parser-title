@@ -11,9 +11,10 @@ const posthtmlParserTitle = () => (tree: Node): Node => {
   tree.match({tag: 'title'}, (node: Node): Node => {
     if (node.content) {
       // @ts-expect-error
-      node.content = node.content.flatMap(content => {
+      node.content = node.content.map(content => {
         if (typeof content === 'string') {
-          return parser(content, options);
+          const [node] = parser(content, options);
+          return node;
         }
 
         return node;
